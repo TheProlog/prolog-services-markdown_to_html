@@ -1,5 +1,7 @@
 # Prolog::Services::MarkdownToHtml
 
+[ ![Codeship Status for TheProlog/prolog-services-markdown_to_html](https://codeship.com/projects/a6037340-dbee-0133-f020-32121d68b74a/status?branch=master)](https://codeship.com/projects/143979)
+
 This Gem was extracted from a number of internally-developed applications, which should somewhat explain the namespacing and the initial version number being set to `1.0.0`.
 
 The Gem provides an (extremely) simple API for converting valid Markdown content, including embedded HTML, to valid HTML that "just happens" to be well-formed XML. This means, *inter alia,* that
