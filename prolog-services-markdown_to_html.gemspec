@@ -47,7 +47,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "flay", "~> 2.6"
   spec.add_development_dependency "flog", "~> 4.3", ">= 4.3.2"
   spec.add_development_dependency "reek", "~> 4.0"
-  spec.add_development_dependency "rubocop", "0.35.1" # FIXME: newer introduces odd config problems
+  spec.add_development_dependency "rubocop", "0.39.0"
   spec.add_development_dependency "simplecov", "~> 0.10"
   spec.add_development_dependency "pry-byebug", "~> 3.2"
   spec.add_development_dependency "pry-doc", "~> 0.8"
