@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require_relative 'markdown_to_html/version'
 require_relative 'markdown_to_html/renderer'

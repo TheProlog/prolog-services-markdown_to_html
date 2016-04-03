@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require_relative 'renderer/html_pipeline_converter'
 

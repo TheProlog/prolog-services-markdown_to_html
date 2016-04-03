@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require 'html/pipeline'
 
@@ -23,8 +24,8 @@ module Prolog
             # As per https://www.w3.org/TR/html-markup/syntax.html#void-element
             def self.clean_void_elements(markup)
               markup.gsub(/<br(.*?)>/, '<br\1/>')
-                .gsub(/<hr(.*?)>/, '<hr\1/>')
-                .gsub(/<img(.*?)>/, '<img\1/>')
+                    .gsub(/<hr(.*?)>/, '<hr\1/>')
+                    .gsub(/<img(.*?)>/, '<img\1/>')
             end
 
             def self.strip_lines_in(content)

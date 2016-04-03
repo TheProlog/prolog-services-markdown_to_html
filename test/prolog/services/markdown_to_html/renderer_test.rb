@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require 'test_helper'
 
@@ -16,7 +17,7 @@ describe 'Prolog::Services::MarkdownToHtml::Renderer' do
   end
 
   it 'has a #to_s method' do
-    expect(described_class.new content: 'content').must_respond_to :to_s
+    expect(described_class.new(content: 'content')).must_respond_to :to_s
   end
 
   describe 'when initialised with content that is' do

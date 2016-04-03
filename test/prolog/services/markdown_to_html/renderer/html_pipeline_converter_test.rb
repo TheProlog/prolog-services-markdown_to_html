@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require 'test_helper'
 
@@ -17,14 +18,14 @@ describe 'Prolog::Services::MarkdownToHtml::Renderer::HtmlPipelineConverter' do
     it 'converts basic Markdown to HTML' do
       fragment = "This is basic content.\n\nThis is more content."
       expected = '<p>This is basic content.</p><p>This is more content.</p>'
-      expect(the_method.call fragment).must_equal expected
+      expect(the_method.call(fragment)).must_equal expected
     end
 
     describe 'converts content, properly rendering elements including' do
       before { @expected = nil }
 
       after do
-        expect(the_method.call @fragment).must_equal @expected if @expected
+        expect(the_method.call(@fragment)).must_equal @expected if @expected
       end
 
       # Remember, valid HTML *is* valid Markdown.
@@ -33,7 +34,7 @@ describe 'Prolog::Services::MarkdownToHtml::Renderer::HtmlPipelineConverter' do
       it '<img/> with attributes' do
         fragment = '<img src="http://example.com/image1.png">'
         expected = %r{<img src="http://example.com/image1.png".*?/></a>}
-        expect(the_method.call fragment).must_match expected
+        expect(the_method.call(fragment)).must_match expected
       end
 
       describe '<br/>' do
