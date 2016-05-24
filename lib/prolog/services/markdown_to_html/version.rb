@@ -4,7 +4,7 @@ module Prolog
   module Services
     # Service to convert Markdown content to equivalent HTML.
     class MarkdownToHtml
-      VERSION = '1.0.1'
+      VERSION = '1.0.2'
     end
   end
 end
