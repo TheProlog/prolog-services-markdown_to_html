@@ -12,14 +12,13 @@ module Prolog
 
         def initialize(content:)
           @rendered = HtmlPipelineConverter.render content
-          self
         end
 
         def to_s
           @rendered
         end
 
-        alias_method :to_str, :to_s
+        alias_method :to_str, :to_s # rubocop:disable Style/Alias
       end # class Prolog::Services::MarkdownToHtml::Renderer
     end # class Prolog::Services::MarkdownToHtml
   end

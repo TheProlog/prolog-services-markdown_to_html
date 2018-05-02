@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 
 require 'pry-byebug'
 require 'simplecov'
@@ -17,6 +17,7 @@ if uses_cc
 end
 
 SimpleCov.start do
+  add_filter '/vendor/'
   sc_formatters = [
     SimpleCov::Formatter::HTMLFormatter
   ]
@@ -39,7 +40,8 @@ end
 require 'minitest/autorun' # harmless if already required
 require 'minitest/reporters'
 Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(
-  color: true, detailed_skip: true, fast_fail: true)]
+  color: true, detailed_skip: true, fast_fail: true
+)]
 
 # Set up MiniTest::Tagz, with stick-it-anywhere `:focus` support.
 require 'minitest/tagz'

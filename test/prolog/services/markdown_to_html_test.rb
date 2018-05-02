@@ -29,7 +29,7 @@ describe 'Prolog::Services::MarkdownToHtml' do
 
       it 'an HTML paragraph wrapping a simple text :content string' do
         @content = 'This is a test.'
-        @expected = %w(<p> </p>).join @content
+        @expected = %w[<p> </p>].join @content
       end
 
       it 'a sequence of paragraphs wrapping double-newline-separated content' do
@@ -43,6 +43,7 @@ describe 'Prolog::Services::MarkdownToHtml' do
       end
 
       it 'correct markup for more complex input' do
+        # rubocop:disable Layout/IndentHeredoc
         @content = <<~ENDIT
                    # First Header
                    ## Second Header
@@ -56,6 +57,8 @@ describe 'Prolog::Services::MarkdownToHtml' do
 
                    In closing, we thank the Academy of Lorem Ipsum.
                    ENDIT
+        # rubocop:enable Layout/IndentHeredoc
+
         @expected = '<h1>First Header</h1><h2>Second Header</h2>' \
                     '<h3>Third Header</h3><p>This is an <em>initial</em> ' \
                     'paragraph under the <del>third</del> header.</p>' \

@@ -32,14 +32,15 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "ox", "~> 2.3"
+  spec.add_dependency 'commonmarker', '>= 0.17.9'
   spec.add_dependency "html-pipeline", "~> 2.3"
-  spec.add_dependency "gemoji", "~> 2.1"
+  spec.add_dependency "gemoji", ">= 3.0.0"
   spec.add_dependency "github-markdown", "0.6.9"
   spec.add_dependency "rinku", "~> 2.0"
 
   spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 11"
-  spec.add_development_dependency "minitest", "~> 5.0"
+  spec.add_development_dependency "rake", ">= 12.3.1"
+  spec.add_development_dependency "minitest", ">= 5.11.3"
 
   spec.add_development_dependency "minitest-matchers", "~> 1.4"
   spec.add_development_dependency "minitest-reporters", "~> 1.0"
@@ -47,7 +48,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "flay", "~> 2.6"
   spec.add_development_dependency "flog", "~> 4", ">= 4.4.0"
   spec.add_development_dependency "reek", "~> 4.0"
-  spec.add_development_dependency "rubocop", "0.39.0"
+  spec.add_development_dependency "rubocop", "0.55.0"
   spec.add_development_dependency "simplecov", "~> 0.10"
   spec.add_development_dependency "pry-byebug", "~> 3.4"
   spec.add_development_dependency "pry-doc", "~> 0.8"

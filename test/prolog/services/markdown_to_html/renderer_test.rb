@@ -70,16 +70,17 @@ describe 'Prolog::Services::MarkdownToHtml::Renderer' do
       end # describe 'multiple paragraphs'
 
       describe 'complex, multiple-top-level-element content' do
+        # rubocop:disable Layout/IndentHeredoc
         let(:content) do
           <<~ENDIT
           1. First Item.
           2. Second Item.
-            * First Nested Item
-            * Second Nested Item
+              * First Nested Item
+              * Second Nested Item
           3. Third Item.
           4. Fourth Item.
-            1. First nested item
-            2. Second nested item.
+              1. First nested item
+              2. Second nested item.
           5. Final item.
 
           This is a paragraph.
@@ -90,6 +91,8 @@ describe 'Prolog::Services::MarkdownToHtml::Renderer' do
 
           ENDIT
         end
+        # rubocop:enable Layout/IndentHeredoc
+
         let(:expected) do
           '<ol><li>First Item.</li><li>Second Item.' \
             '<ul><li>First Nested Item</li><li>Second Nested Item</li></ul>' \
